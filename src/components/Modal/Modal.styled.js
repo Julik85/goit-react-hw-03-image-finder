@@ -1,25 +1,26 @@
 import styled from '@emotion/styled';
 
 export const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 5;
+background-color: #01010a9c;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2000;
+width: 100%;
+height: 100%;
 `;
 
 export const Modal= styled.div`
-  border-radius: 10px;
-  background-color: #fff;
-  overflow: hidden;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 900px;
+height: 600px;
 
   .modal-content {
-    max-width: calc(100vw - 48px);
-    max-height: calc(100vh - 24px);
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 `;

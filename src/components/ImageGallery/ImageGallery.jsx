@@ -5,6 +5,7 @@ import { Loading } from 'components/Loader/Loader';
 import PixabayApi from '../API/pixaby-api';
 import { toast } from 'react-toastify';
 import { ModalImage } from 'components/Modal/Modal';
+import { LoadMore } from 'components/Button/Button.styled';
 
 export class ImageGallery extends Component {
   state = {
@@ -87,10 +88,10 @@ export class ImageGallery extends Component {
             })}
           </ImageGalleryList>
           {this.state.status === 'pending' && <Loading />}
-          <button type="button" onClick={this.IncrementPage}>
+          <LoadMore type="button" onClick={this.IncrementPage}>
             {' '}
             load more
-          </button>
+          </LoadMore>
           {showModal && (
             <ModalImage onClose={this.toggleModal}>
               <img className="modal-content" src={largeImage} alt={alt} />              
