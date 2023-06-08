@@ -16,8 +16,7 @@ export class App extends Component {
     return (
       <>      
       <Searchbar qwe={this.handleFormSubmit}></Searchbar>
-      <ImageGallery searchQuery={this.state.query}/>
-      
+      <ImageGallery searchQuery={this.state.query}/>      
       <ToastContainer autoClose={6000}/>
     </>
     )

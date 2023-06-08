@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import { Component } from 'react';
 import { ImSearch } from 'react-icons/im';
-import { Header, SearchHeader } from './SearchBar.styled';
+import { SearchHeader } from './SearchBar.styled';
 
 export class Searchbar extends Component {
   state = {
@@ -34,10 +34,10 @@ export class Searchbar extends Component {
           <input
             className="input"
             type="text"
-            autocomplete="off"
+          
             value={this.state.name}
             onChange={this.handleNameChange}
-            autofocus
+           
             placeholder="Search images and photos"
           />
         </form>
